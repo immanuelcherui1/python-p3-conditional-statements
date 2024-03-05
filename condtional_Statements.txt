@@ -1,0 +1,83 @@
+Python does not require the variable to be declared or initialized prior to the conditional. 
+
+Falsy Values:
+        Empty lists []
+        Empty tuples ()
+        Empty dictionaries {}
+        Empty sets set()
+        Empty strings '' or ""
+        Zero of any numeric type (0, 0.0)
+        None
+        And, of course, False
+
+Ternary Operator/ Conditional expression:
+    Python also allows us to use conditional expressions (or ternary operators) to evaluate 
+    the truthiness of complex statements in a single line.
+
+    Example:
+    age = 1
+    is_baby = 'baby' if age < 2 else 'not a baby'
+
+    format:
+    'value_if_true' if condition else 'value_if_false'
+
+    Python requires a default value (preceded by the else keyword) in every conditional 
+    statement. It may seem like a pain at first, but it helps to prevent unexpected 
+    exceptions and Nones as you continue to build your application.
+
+try/except Statements:
+    Exceptions are a type of error that we can intercept so that our Python application 
+    can continue to run.
+
+    Example:
+            def divide(num1, num2):
+            try:
+                quotient = num1 / num2
+                print(quotient)
+            except ZeroDivisionError:
+                print("Error: num2 cannot be equal to 0")
+            except TypeError:
+                print("Error: input must be of type int or float")
+            finally:
+                print("Isn't division fun?")
+
+    `finally` keyword at the end of a try/except statement allows us to perform actions 
+     that we want to occur regardless of whether or not an exception has been thrown.
+    
+
+Dictionary Mapping:
+    Dictionary mapping allows you to efficiently store and retrieve data using keys.
+    (Abstracts the if/elif/else long statements into fewer lines of code)
+
+    Python can handle switch/case logic in `if/elif/else` statements, but for very long sets of
+     conditions, it may be worthwhile to use dictionary mapping instead.
+    
+    NOTE: 
+        Python 3.10 has introduced match/case statements which function very similarly to
+         switch/case statements in JavaScript. Though we are using an earlier version of 
+         Python in our curriculum, you can explore this new feature in the Python 3.10 
+         documentation.
+    
+    Dictionary Mapping:
+        Example:
+                dog = "cuddly"
+
+                dict_map = {
+                    "hungry": "Refilling food bowl.",
+                    "thirsty": "Refilling water bowl.",
+                    "playful": "Playing tug-of-war.",
+                    "cuddly": "Snuggling.",
+                }
+
+                # Remember that a dictionary's .get() method lets us set a default value!
+                owner = dict_map.get(dog, "Reading newspaper.")
+
+        #Accessing Values: You can access the value associated with a key by using square
+         brackets [] or the get() method.
+        
+
+
+
+
+    
+
